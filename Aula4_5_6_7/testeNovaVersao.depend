@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1693013263 source:/home/rafael/Desktop/Teste/Linguagem_C/testeNovaVersao/main.c
+	<stdio.h>
+	<stdlib.h>
+
+1693013539 source:/home/rafael/Desktop/Teste/Linguagem_C/testeNovaVersao/Aula04.c
+	<stdio.h>
+	<stdlib.h>
+
