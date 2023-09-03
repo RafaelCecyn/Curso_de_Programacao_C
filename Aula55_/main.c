@@ -4,7 +4,6 @@
 /*
     Crie um programa que permita ao usuário escolher entre fazer a conversão de Real para Dólar ou
     de Dólar para Real. Utilize como taxa de câmbio $1 igual a R$5.30.
-    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
 */
 
 int main()
