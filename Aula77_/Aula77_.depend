@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1693683414 source:/home/rafael/Desktop/Teste/Linguagem_C/Aula77_/main.c
+	<stdio.h>
+	<stdlib.h>
+

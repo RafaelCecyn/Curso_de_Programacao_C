@@ -35,7 +35,7 @@ int main() {
 E1_07) Faça um programa que leia três números e os apresente em ordem crescente.
 */
 
-
+/*
 int main () {
 
     int num1,num2,num3;
@@ -79,4 +79,85 @@ int main () {
 
 
 }
+*/
+
+/*
+        Faça um programa que leia dois números A e B e apresente o maior divisor comum dos dois números.
+*/
+
+/*
+
+int main (){
+    int num1,num2,mdc = 1,maior,i;
+    scanf("%d%d",&num1,&num2);
+    if (num1 > num2) {
+        maior = num1;
+    }
+    else
+        maior = num2;
+
+    for (i=2;i <= maior; i++) {
+        if (num1 % i == 0 && num2 % i == 0) {
+            num1 = num1 / i;
+            num2 = num2 / i;
+            mdc *= i;
+            i--;
+        }
+    }
+    printf("%d",mdc);
+    return 0;
+}
+*/
+
+/*
+    E1_05) Faça um programa que leia 10 números inteiros e apresente o maior (não utilize vetor/matriz).
+*/
+/*
+
+int main() {
+    int num,maior,i;
+    scanf("%d",&maior);
+
+    for (i=2;i <= 10;i++) {
+        scanf("%d",&num);
+        if (num > maior) {
+            maior = num;
+        }
+
+    }
+    printf("%d\n",maior);
+    return 0;
+
+}
+*/
+
+/*
+    E1_06) Faça um programa que leia uma lista de números inteiros terminados por 0, para cada número lido o programa deve informar o número e se o número é par ou ímpar. Não utilize vetores/matrizes.
+    mostre apenas "par" ou "impar" (sem acentos).
+*/
+
+int main() {
+    int num;
+    do {
+        scanf("%d",&num);
+
+        if (num == 0) {
+            break;
+        }
+
+        else if (num % 2 == 0) {
+            printf("%d ",num);
+            printf("par \n");
+        }
+        else {
+            printf("%d ",num);
+            printf("impar \n");
+        }
+
+    } while(1);
+    return 0;
+}
+
+
+
 
