@@ -135,7 +135,7 @@ int main() {
     E1_06) Faça um programa que leia uma lista de números inteiros terminados por 0, para cada número lido o programa deve informar o número e se o número é par ou ímpar. Não utilize vetores/matrizes.
     mostre apenas "par" ou "impar" (sem acentos).
 */
-
+/*
 int main() {
     int num;
     do {
@@ -157,7 +157,415 @@ int main() {
     } while(1);
     return 0;
 }
+*/
 
+/*
+Faça um programa que leia 10 valores e armazene-os em um vetor. Na sequência, apresente os valores contidos no vetor que sejam a moda do conjunto (os valores com maior ocorrência no vetor. No caso de empate, apresente os valores com igual frequência).
+Entrada
+1
+4
+4
+5
+5
+2
+3
+6
+8
+10
+Saída
+4
+5
+*/
+/*
+int main() {
+    int i,num[10];
+
+    for (i=0;i<=10;i++){
+        printf("Digite os valores:\n");
+        scanf("%d",&num[i]);
+    }
+
+}
+*/
+
+
+/*
+E2_20) Faça um programa que leia 10 valores e armazene-os em um vetor. Na sequência, leia um número e procure esse número no vetor.
+Se encontrar, apresente o índice da posição da primeira que ocorrência do número, caso contrário apresente o valor -1.
+*/
+
+/*
+int main() {
+    int i,num[10],num2,indiceEncontrado = -1;
+
+    for(i= 0;i < 10;i++) {
+        scanf("%d",&num[i]);
+    }
+    scanf("%d",&num2);
+    for (i=0;i < 10;i++) {
+        if(num[i] == num2) {
+            indiceEncontrado = i;
+            break;
+        }
+    }
+    if (indiceEncontrado != -1) {
+        printf("%d",indiceEncontrado);
+    } else {
+         printf("%d",indiceEncontrado);
+    }
+
+}
+*/
+
+/*
+E2_21) Faça um programa que leia 10 valores e armazene-os em um vetor.
+Na sequência, leia um número e procure esse número no vetor. E apresente o índice de todas as ocorrências localizadas, caso contrário -1.
+
+*/
+/*
+int main() {
+    int i,num[10],num2,indiceEncontrado = -1;
+
+    for(i= 0;i < 10;i++) {
+        scanf("%d",&num[i]);
+    }
+    scanf("%d",&num2);
+    for (i=0;i < 10;i++) {
+        if(num[i] == num2) {
+            printf("%d\n",i);
+            indiceEncontrado = i;
+        }
+    }
+    if (indiceEncontrado == -1) {
+        printf("%d",indiceEncontrado);
+    }
+
+}
+*/
+
+/*
+    E2_11) Faça um programa que leia 10 números, armazene-os em um vetor e apresente os 5 (cinco) números que estão nas posições ímpares.
+*/
+
+/*
+int main() {
+    int i,num[10];
+
+    for(i= 0;i < 10;i++) {
+        scanf("%d",&num[i]);
+    }
+    for (i=0;i < 10;i++) {
+        if(i % 2 != 0) {
+            printf("%d\n",num[i]);
+        }
+    }
+}
+*/
+
+/*
+    E2_12) Faça um programa que leia uma matriz de inteiros de 3x3 e apresente os elementos da diagonal principal.
+*/
+
+/*
+int main () {
+    int i,j,mat1[3][3];
+
+    for(i=0;i < 3; i++)
+        for(j=0; j < 3; j++)
+        scanf("%d",&mat1[i][j]);
+
+
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++)
+            if(i == j){
+            printf("%d\n",mat1[i][j]);
+            }
+    }
+
+    return 0;
+
+}
+*/
+
+/*
+    E2_13) Faça um programa que leia uma matriz de inteiros de 3x3 e apresente os elementos da diagonal secundária.
+*/
+/*
+int main () {
+    int i,j,mat1[3][3];
+
+    for(i=0;i < 3; i++)
+        for(j=0; j < 3; j++)
+        scanf("%d",&mat1[i][j]);
+
+
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++)
+            if((i == 0 && j == 2) || (i == 1 && j == 1) || (i == 2 && j == 0)){
+            printf("%d\n",mat1[i][j]);
+            }
+    }
+
+    return 0;
+
+}
+*/
+
+/*
+    E2_14) Faça um programa que leia uma matriz de inteiros de 3x4 e apresente a soma de cada coluna. A saída deverá ter um número por linha.
+*/
+/*
+int main () {
+    int i,j,mat1[3][4],somaCol1 = 0,somaCol2 = 0,somaCol3 = 0,somaCol4 = 0;
+
+    for(i=0;i < 3; i++)
+        for(j=0; j < 4; j++)
+        scanf("%d",&mat1[i][j]);
+
+
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 4; j++)
+            if(j == 0) {
+                somaCol1 += mat1[i][j];
+            }
+            else if(j == 1) {
+                somaCol2 += mat1[i][j];
+            }
+            else if(j == 2) {
+                somaCol3 += mat1[i][j];
+            }
+            else if(j == 3) {
+                somaCol4 += mat1[i][j];
+            }
+    }
+            printf("%d\n",somaCol1);
+            printf("%d\n",somaCol2);
+            printf("%d\n",somaCol3);
+            printf("%d\n",somaCol4);
+
+    return 0;
+
+}
+*/
+
+/*
+E2_18) Faça um programa que leia 10 valores e armazene-os em um vetor.
+Na sequência, apresente os valores contidos no vetor, onde a diferença entre os valores contidos em dois elementos sucessivos não seja maior do que um.
+Entrada
+1
+3
+4
+8
+9
+2
+4
+6
+8
+10
+Saída
+3 4
+8 9
+*/
+
+/*
+
+int main() {
+    int i,vet[10];
+
+    for(i=0;i<10;i++)
+        scanf("%d",&vet[i]);
+
+    for(i=0;i<10;i++)  {
+        if(vet[i] - vet[i+1] == 1 || vet[i] - vet[i+1] == -1) {
+            printf("%d %d\n", vet[i], vet[i+1]);
+        }
+    }
+
+    return 0;
+}
+
+*/
+
+/*
+    E2_15) Faça um programa que leia uma matriz de inteiros de 3x4 e apresente os elementos em que a soma dos índices i e j sejam pares. Respeite a ordem de apresentação linha,coluna.
+
+    a soma de cada coluna. A saída deverá ter um número por linha.
+    Exemplo de entrada
+    1 2 3 4
+    5 6 7 8
+    9 10 11 12
+    Saída
+    1
+    3
+    6
+    8
+    9
+    11
+*/
+
+/*
+int main () {
+    int i,j,mat1[3][4];
+
+    for(i=0;i < 3; i++)
+        for(j=0; j < 4; j++)
+        scanf("%d",&mat1[i][j]);
+
+
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 4; j++)
+            if((i + j) % 2 == 0) {
+                printf("%d\n",mat1[i][j]);
+            }
+    }
+    return 0;
+}
+*/
+
+/*
+
+    E2_16) Faça um programa que leia 10 valores e armazene-os em um vetor. Na sequência, leia dois valores inteiros que estejam entre 0 e 9 (índices a e b) e
+           apresente os valores lidos (vetor) que estejam entre os índices a e b.
+    Entrada
+    1 2 3 4 5 6 7 8 9 10
+    3 5
+    saída
+    4
+    5
+    6
+
+*/
+/*
+int main() {
+    int i,vet[10],a,b;
+
+    for(i = 0; i < 10;i++) {
+        scanf("%d",&vet[i]);
+    }
+
+    do {
+        scanf("%d",&a);
+    } while(a <= 0 || a >= 9);
+
+    do {
+        scanf("%d",&b);
+    } while(b <= 0 || b >= 9);
+
+     for(i = 0; i < 10;i++) {
+        if(i >= a && i <= b )
+        printf("%d\n",vet[i]);
+    }
+}
+*/
+
+
+/*
+E2_17) Faça um programa que leia 10 valores e armazene-os em um vetor. Na sequência, apresente os valores do maior para o menor.
+Entrada
+1
+3
+5
+7
+9
+2
+4
+6
+8
+10
+Saída
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+*/
+
+/*
+int main() {
+    int i,j,vet[10],aux;
+
+    for(i = 0; i < 10;i++) {
+        scanf("%d",&vet[i]);
+    }
+
+    for(j=0;j < 10; j++) {
+        for(i = 0; i < 9;i++) {
+            if(vet[i] < vet[i+1]) {
+                aux = vet[i+1];
+                vet[i+1] = vet[i];
+                vet[i] = aux;
+            }
+        }
+    }
+
+    for(i = 0; i < 10;i++) {
+        printf("%d\n",vet[i]);
+    }
+}
+*/
+
+/*
+E2_19) Faça um programa que leia 10 valores e armazene-os em um vetor. Na sequência, apresente os valores contidos no vetor que sejam a moda do conjunto (os valores com maior ocorrência no vetor. No caso de empate, apresente os valores com igual frequência).
+Entrada
+1
+4
+4
+5
+5
+2
+3
+6
+8
+10
+Saída
+4
+5
+*/
+
+int main() {
+    int vetor[10];
+
+    for (int i = 0; i < 10; i++) {
+        scanf("%d", &vetor[i]);
+    }
+
+    int frequencia[10] = {0}; //
+    int maxFrequencia = 0;
+
+    for (int i = 0; i < 10; i++) {
+        int contador = 0;
+        for (int j = 0; j < 10; j++) {
+            if (vetor[j] == vetor[i]) {
+                contador++;
+            }
+        }
+
+        if (contador > maxFrequencia) {
+            maxFrequencia = contador;
+        }
+
+        frequencia[i] = contador;
+    }
+
+    for (int i = 0; i < 10; i++) {
+        if (frequencia[i] == maxFrequencia) {
+            int j;
+            for (j = 0; j < i; j++) {
+                if (vetor[j] == vetor[i]) {
+                    break;
+                }
+            }
+            if (j == i) {
+                printf("%d\n", vetor[i]);
+            }
+        }
+    }
+}
 
 
 
