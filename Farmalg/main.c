@@ -526,7 +526,7 @@ Saída
 4
 5
 */
-
+/*
 int main() {
     int vetor[10];
 
@@ -566,6 +566,143 @@ int main() {
         }
     }
 }
+*/
+
+/*
+E25) Faça um programa que leia uma String e apresente todos os prefixos da string.
+Exemplo 1:
+Entrada:
+pedra
+saída:
+p
+pe
+ped
+pedr
+pedra
+*/
+/*
+int main() {
+    char palavra[10],aux[10];
+    int i;
+    scanf("%10[^\n]",palavra);
+
+    i = 0;
+    while(palavra[i]){
+        aux[i] = palavra[i];
+        printf("%s\n",aux);
+        i++;
+    }
+    return 0;
+}
+*/
 
 
+/*
+E31) Faça um programa que leia uma frase e apresente o número de palavras lidas. Considere todo símbolo não alfabético ou não numérico como delimitador.
+Exemplo:
+Entrada
+A casa das 7 irmãs.
+Saída:
+5
+
+*/
+/*
+int main() {
+    char palavra[100];
+    int i,contador=1;
+    scanf("%100[^\n]",palavra);
+
+    i = 0;
+
+    while(palavra[i] != '\0'){
+        if ((palavra[i] == ' ') || (palavra[i] == ':') ){
+        contador++;
+        }
+        i++;
+    }
+    printf("%d",contador);
+    return 0;
+
+}
+*/
+
+
+/*
+E22) Faça uma função que receba um vetor de char e um número e retorne no vetor os valores ‘0’ e ‘1’
+correspondente ao valor binário de cada posição do número. Considere números de até 32 bits.
+(Considere o vetor com 33 posições). Preserve os zeros a direita do digito significativo.
+*/
+#include <stdbool.h>
+int main(void) {
+int num;
+char str[33];
+scanf("%d",&num);
+func(str,num);
+printf("%s\n",str);
+}
+void func(char vet[], int num) {
+    int i=0,a,aux,j;
+    bool isNeg = false;
+    if (num < 0) {
+        num = num * -1;
+        isNeg = true;
+    }
+
+
+    while(num > 0) {
+        vet[i] = num % 2;
+//      printf("%d",vet[i]);
+        num = num / 2;
+        i++;
+    }
+
+    for(a=0;a < (i/2);a++){
+        aux = vet[a];
+        vet[a] = vet[i-a-1];
+        vet[i-a-1] = aux;
+   }
+
+
+
+   if (isNeg){
+    vet[0] = '0' + 1;
+   for(j=1;j<i+1;j++){
+        vet[j] += '0';
+        printf("\nVetor %d\n",vet[j]);
+   }
+
+   } else{
+       for(j=0;j<i;j++){
+        vet[j] += '0';
+        printf("\nVetor %d\n",vet[j]);
+   }
+   }
+
+   return vet;
+}
+
+/*
+int main() {
+    int num,vet[32],i=0,aux,a,j;
+    printf("Digite um numero: ");
+    scanf("%d",&num);
+
+    while(num > 0) {
+        vet[i] = num % 2;
+        printf("\n%d\n",vet[i]);
+        num = num / 2;
+        i++;
+    }
+
+   for(a=0;a < (i/2);a++){
+        aux = vet[a];
+        vet[a] = vet[i-a-1];
+        vet[i-a-1] = aux;
+   }
+
+   for(j=0;j<4;j++){
+        printf("\nVetor %d\n",vet[j]);
+   }
+}
+*/
 
